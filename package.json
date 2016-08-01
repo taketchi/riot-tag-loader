@@ -1,0 +1,24 @@
+{
+  "name": "riot-tag-loader",
+  "version": "0.0.1",
+  "description": "riotjs tag loader for webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taketchi/riot-tag-loader.git"
+  },
+  "author": "hidenobu takeshima <taketchi@mac.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taketchi/riot-tag-loader/issues"
+  },
+  "homepage": "https://github.com/taketchi/riot-tag-loader#readme",
+  "dependencies": {
+    "loader-utils": "^0.2.15",
+    "object-assign": "^4.1.0",
+    "riot-compiler": "^2.5.2"
+  }
+}
