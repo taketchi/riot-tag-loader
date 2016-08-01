@@ -11,7 +11,8 @@ var setParsers = function(configPath,emitWarning){
             'whitespace',
             'expr',
             'type',
-            'template'
+            'template',
+            'style'
             //'parser' to process in a different
         ],
         availableOpts       = {},
@@ -51,7 +52,6 @@ var setParsers = function(configPath,emitWarning){
 var compiler = function(src,opts){
     try{
         return riotCompiler.compile(src,opts);
-
     }
     catch (e) {
         if(e instanceof Error){
