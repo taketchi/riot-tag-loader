@@ -4,7 +4,7 @@ var path                = require("path"),
     assign              = require('object-assign'),
     riotCompiler        = require('riot-compiler');
 
-var setParsers = function(configPath){
+var setParsers = function(configPath,emitWarning){
     var configObj           = {},
         availableOptsName   = [
             'compact',
@@ -65,14 +65,15 @@ var compiler = function(src,opts){
 module.exports = function(src) {
     var loaderOpts  = loaderUtils.parseQuery(this.query),
         opts        = {},
-        configPath  = '';
+        configPath  = '',
+        emitWarning = this.emitWarning;
 
     if (this.cacheable) this.cacheable();
 
     if(loaderOpts.config != null){
         configPath = path.resolve(loaderOpts.config);
         delete loaderOpts.config;
-        opts = assign({},setParsers(configPath),loaderOpts);
+        opts = assign({},setParsers(configPath,emitWarning),loaderOpts);
     }
     else{
         opts = assign({},loaderOpts);
